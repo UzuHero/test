@@ -1,41 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>registration form</title>
+    <title>Registration Form</title>
     <link rel="stylesheet" href="./style.css">
+    <script src="./script.js"></script>
 </head>
 <body>
-    <script src="./script.js"></script>
     <div class="container">
-        <h1>Регистрация</h1>
-        <form>
-            <div class="first_name">
-                <label for="first_name">Имя</label>
-                <input id="first-name" type="text" placeholder="Иван" name="first_name" required>
-            </div>
-            <div class="last_name">
-                <label for="first_name">Фамилия</label>
-                <input id="last-name" type="text" placeholder="Иванов" name="last_name" required>
-            </div>
+        <form class="form">
+            <h1 class="form_title">Регистрация</h1>
+                <div class="first_name">
+                    <label for="first_name">Имя</label><br>
+                    <input id="first-name" type="text" placeholder="Иван" name="first_name" required>
+                </div>
+                <div class="last_name">
+                    <label for="first_name">Фамилия</label><br>
+                    <input id="last-name" type="text" placeholder="Иванов" name="last_name" required>
+                </div>
             <div class="brith_day">
-                <label for="brith_day">Дата рождения</label>
+                <label for="brith_day">Дата рождения</label><br>
                 <input id="birth-day" type="date" name="brith_day" required>
             </div>
-            <div class="email">
-                <label for="email">Email</label>
-                <input id="email" type="email" placeholder="Example@mail.com" name="email" required>
-            </div>
-            <div class="password">
-                <label for="password">Пароль</label>
-                <input id="password" type="password" placeholder="Придумайте пароль" name="password" required>
-            </div>
-            <div class="password_confim">
-                <label for="password_confim">Подтвердите пароль</label>
-                <input id="password-confirm" type="password" placeholder="Подтвердите пароль" name="password_confim" required>
-            </div>
+                <div class="email">
+                    <label for="email">Email</label><br>
+                    <input id="email" type="email" placeholder="Example@mail.com" name="email" required>
+                </div>
+                <div class="password">
+                    <label for="password">Пароль</label><br>
+                    <input id="password" type="password" placeholder="Придумайте пароль" name="password" required>
+                </div>
+                <div class="password_confim">
+                    <label for="password_confim">Подтвердите пароль</label><br>
+                    <input id="password-confirm" type="password" placeholder="Подтвердите пароль" name="password_confim" required>
+                </div>
             <div class="form_button">
-                <button id="form-button" type="submit" class="form_button">Зарегистрироваться</button>
+                <button id="form-button" type="submit" class="button">Зарегистрироваться</button>
             </div>
         </form>
     </div>
