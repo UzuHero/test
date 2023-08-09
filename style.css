@@ -1,6 +1,74 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     font-family: 'PT Sans', sans-serif;
     margin: 0;
+
+    background-color: blueviolet;
+}
+
+.container{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width: 40%;
+    /* background-color: brown; */
+}
+
+.form{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 5px 45px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+}
+.form_title{
+    margin: 0;
+    padding: 10px 0 10px 0;
+    text-align: center;
+}
+input{
+    background: rgba(0, 0, 0, 0.2);
+    border: none;
+    margin: 0 0px 15px 20px;
+    width: 85%;
+    padding: 5px;
+    border-radius: 5px;
+    border-bottom: 1px solid rgba(142, 18, 173, 0.671);
+}
+input:focus{
+    outline: none;
+}
+::placeholder{
+    color: rgba(0, 0, 0, 0.527);
+    font-size: 14px;
+}
+label{
+    text-align: center;
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+.form_button{
+    display: flex;
+    justify-content:center;
+}
+.button{
+    text-shadow: 3px 1px 3px rgba(0, 0, 0, 0.859);
+    font-family: 'PT Sans', sans-serif;
+    border-radius: 20px;
+    border: none;
+    width: 250px;
+    margin: 10px 0 30px 0;
+    background: rgba(93, 0, 119, 0.692);
+    padding: 10px 0 10px 0;
+    text-align: center;
+    color: rgba(228, 240, 240, 0.732);
+    font-size: 20px;
+    box-shadow: 0 3px 10px rgba(53, 2, 54, 0.584);
+    border-bottom: 1px solid rgba(49, 8, 35, 0.574);
 }
