@@ -8,36 +8,36 @@
 <body>
     <script src="./script.js"></script>
     <div class="container">
-        <div class="registration_form">
-            <h1>Регистрация</h1>
+        <h1>Регистрация</h1>
+        <form>
             <div class="first_name">
                 <label for="first_name">Имя</label>
-                <input type="text" placeholder="Введите имя" name="first_name" required>
+                <input id="first-name" type="text" placeholder="Иван" name="first_name" required>
             </div>
             <div class="last_name">
                 <label for="first_name">Фамилия</label>
-                <input type="text" placeholder="Введите фамилию" name="last_name" required>
+                <input id="last-name" type="text" placeholder="Иванов" name="last_name" required>
             </div>
             <div class="brith_day">
                 <label for="brith_day">Дата рождения</label>
-                <input type="text" placeholder="Введите дату рождения" name="brith_day" required>
+                <input id="birth-day" type="date" name="brith_day" required>
             </div>
             <div class="email">
                 <label for="email">Email</label>
-                <input type="text" placeholder="Введите email" name="email" required>
+                <input id="email" type="email" placeholder="Example@mail.com" name="email" required>
             </div>
             <div class="password">
                 <label for="password">Пароль</label>
-                <input type="text" placeholder="Введите пароль" name="password" required>
+                <input id="password" type="password" placeholder="Придумайте пароль" name="password" required>
             </div>
             <div class="password_confim">
-                <label for="password_confim">Потвердите пароль</label>
-                <input type="text" placeholder="Потвердите пароль" name="password_confim" required>
+                <label for="password_confim">Подтвердите пароль</label>
+                <input id="password-confirm" type="password" placeholder="Подтвердите пароль" name="password_confim" required>
             </div>
             <div class="form_button">
-                <button type="submit" class="form_button">Зарегистрироваться</button>
+                <button id="form-button" type="submit" class="form_button">Зарегистрироваться</button>
             </div>
-        </div>
+        </form>
     </div>
 </body>
 </html>
