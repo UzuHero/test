@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Registration Form</title>
     <link rel="stylesheet" href="./style.css">
-    <script src="./script.js"></script>
+    <script src="./script.js" defer></script>
 </head>
 <body>
     <div class="container">
@@ -15,6 +15,9 @@
                     <div class="box">
                         <input id="first-name" type="text" placeholder="Иван" name="first_name" required>
                         <div class="validation_box"></div>
+                    </div>
+                    <div class="warning">
+                        Имя должно содержать только буквы 
                     </div>
                 </div>
                 <div class="last_name">
@@ -42,13 +45,13 @@
                     <label for="password">Пароль</label><br>
                     <div class="box">
                         <input id="password" type="password" placeholder="Придумайте пароль" name="password" required>
-                        <div class="validation_box"></div>
+                        <div class="validation_box password_valid"></div>
                     </div>
                 </div>
-                <div class="password_confim">
-                    <label for="password_confim">Подтвердите пароль</label><br>
+                <div class="password_confirm">
+                    <label for="password_confirm">Подтвердите пароль</label><br>
                     <div class="box">
-                        <input id="password-confirm" type="password" placeholder="Подтвердите пароль" name="password_confim" required>
+                        <input id="password-confirm" type="password" placeholder="Подтвердите пароль" name="password_confirm" required>
                         <div class="validation_box"></div>
                     </div>
                 </div>
