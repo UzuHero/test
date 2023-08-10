@@ -9,7 +9,9 @@ body {
     font-family: 'PT Sans', sans-serif;
     margin: 0;
 
-    background-color: blueviolet;
+    /* background-color: #8a2be2; */
+    background: linear-gradient(90deg, rgba(99,15,185,1) 0%, rgba(138,43,226,1) 50%, rgba(95,56,226,1) 100%);
+    /* background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(138,43,226,1) 50%, rgba(0,212,255,1) 100%); */
 }
 
 .container{
@@ -21,7 +23,7 @@ body {
 .form{
     height: 100%;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color:rgba(255, 255, 255, 0.1);
     box-shadow: 0 5px 45px rgba(0, 0, 0, 0.5);
     border-radius: 15px;
 }
@@ -33,7 +35,7 @@ body {
 input{
     background: rgba(0, 0, 0, 0.2);
     border: none;
-    margin: 0 0px 20px 20px;
+    margin: 0 0 0 20px;
     width: 88%;
     padding: 5px;
     border-radius: 5px;
@@ -42,6 +44,12 @@ input{
 input:focus{
     outline: none;
     border-bottom: 3px solid rgba(167, 7, 207, 0.764);
+}
+input.invalid:focus{
+    border-bottom: 3px solid rgba(140, 0, 0, 0.764);
+}
+input.valid:focus{
+    border-bottom: 3px solid rgba(12, 120, 9, 0.867);
 }
 ::placeholder{
     color: rgba(0, 0, 0, 0.527);
@@ -73,6 +81,9 @@ label{
     border-bottom: 1px solid rgba(49, 8, 35, 0.574);
     cursor: pointer;
 }
+.button.invalid:focus{
+    background: rgba(54, 47, 55, 0.692);
+}
 #birth-day::-webkit-calendar-picker-indicator{
     cursor: pointer;
 }
@@ -86,13 +97,20 @@ label{
     margin: 5px;
 
     border-radius: 50%;
-    border: 1px solid rgb(118, 90, 146);
+    border: 1px solid rgb(108, 51, 162);
     background: rgba(0, 0, 0, 0.256);
     box-shadow: 1px 0px 1px rgba(53, 2, 54, 0.4);
 }
 .validation_box.invalid{
-    background: red;
+    background: rgb(140, 0, 0);
 }
 .validation_box.valid{
-    background: green;
+    background: rgba(12, 120, 9, 0.867);
+}
+
+.warning{
+    margin-left:20px;
+    color: rgb(140, 0, 0);
+    text-shadow: 0px 0px 1px rgba(82, 7, 7, 0.578);
+    width: 88%;
 }
