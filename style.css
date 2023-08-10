@@ -34,8 +34,8 @@ body {
 input{
     background: rgba(0, 0, 0, 0.2);
     border: none;
-    margin: 0 0px 15px 20px;
-    width: 85%;
+    margin: 0 0px 20px 20px;
+    width: 88%;
     padding: 5px;
     border-radius: 5px;
     border-bottom: 1px solid rgba(142, 18, 173, 0.671);
@@ -71,4 +71,22 @@ label{
     font-size: 20px;
     box-shadow: 0 3px 10px rgba(53, 2, 54, 0.584);
     border-bottom: 1px solid rgba(49, 8, 35, 0.574);
+    cursor: pointer;
+}
+#birth-day::-webkit-calendar-picker-indicator{
+    cursor: pointer;
+}
+.box{
+    display:flex;
+
+}
+.validation_box{
+    width: 10px;
+    height: 10px;
+    margin: 5px;
+
+    border-radius: 50%;
+    border: 1px solid rgb(118, 90, 146);
+    background: rgba(0, 0, 0, 0.256);
+    box-shadow: 1px 0px 1px rgba(53, 2, 54, 0.4);
 }
