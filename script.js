@@ -32,6 +32,14 @@ first_name.oninput = function(){
     }
 }
 
+const messageError = (element, message) => {
+    const inputControl = element.parentElement;
+    const errorMessage = inputControl.querySelector('.invalid');
+
+    errorMessage.innerText = message;
+    inputControl.classList.add('.invalid')
+}
+
 form_button.addEventListener('click', (e) => {
     e.preventDefault();
     console.log(document.querySelectorAll('.validation_box')); 
@@ -47,6 +55,8 @@ form_button.addEventListener('click', (e) => {
     const emailUser=email.value;
     const passwordUser=password.value; 
     const password_confirmUser=password_confirm.value;
+
+
     passwordUser === password_confirmUser ? 
         document.querySelectorAll('.validation_box').forEach(
             item => 

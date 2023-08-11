@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <title>Registration Form</title>
     <link rel="stylesheet" href="./style.css">
-    <script src="./script.js" defer></script>
+    <script src="./script2.js" defer></script>
 </head>
 <body>
     <div class="container">
-        <form class="form">
+        <form id="form" class="form">
             <h1 class="form_title">Регистрация</h1>
             <div class="first_name">
                 <label for="first_name">Имя</label><br>
@@ -25,7 +25,8 @@
                 <div class="box">
                     <input id="last-name" type="text" placeholder="Иванов" name="last_name" required>
                     <div class="validation_box"></div>
-                </div><div class="warning">
+                </div>
+                <div class="warning">
                     Фамилия должна содержать только буквы! 
                 </div>
 
@@ -33,7 +34,7 @@
             <div class="birth_day">
                 <label for="birth_day">Дата рождения</label><br>
                 <div class="box"> 
-                    <input id="birth-day" type="date" name="birth_day" required>
+                    <input id="birth-day" type="date" name="birth_day" onkeydown="return false" required>
                     <div class="validation_box"></div>  
                 </div> 
                 <div class="warning">
@@ -54,7 +55,7 @@
                 <label for="password">Пароль</label><br>
                 <div class="box">
                     <input id="password" class="invalid" type="password" placeholder="Придумайте пароль" name="password" required>
-                    <div class="validation_box password_valid"></div>
+                    <div class="validation_box pass"></div>
                 </div>
                 <div class="warning">
                     Пароль должен состоять не менее чем из 8 знаков, содержать цифры, заглавные и прописные буквы латинского алфавита! 
@@ -64,7 +65,7 @@
                 <label for="password_confirm">Подтвердите пароль</label><br>
                 <div class="box">
                     <input id="password-confirm" class="valid" type="password" placeholder="Подтвердите пароль" name="password_confirm" required>
-                    <div class="validation_box"></div>
+                    <div class="validation_box pass"></div>
                 </div>
                 <div class="warning">
                     Пароли не совпадают! 
