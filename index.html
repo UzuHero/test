@@ -34,7 +34,7 @@
             <div class="birth_day">
                 <label for="birth_day">Дата рождения</label><br>
                 <div class="box"> 
-                    <input id="birth-day" type="date" name="birth_day" onkeydown="return false" required>
+                    <input id="birth-day" type="date" name="birth_day" onkeydown="return false" onchange="isValidAge(event)" required>
                     <div class="validation_box"></div>  
                 </div> 
                 <div class="warning">

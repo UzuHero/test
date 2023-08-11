@@ -27,7 +27,7 @@ const isValidEmail = (email) => {
     return re.test(String(email).toLowerCase());
 };
 const isValidName = (name) => {
-    const re = /^[A-ZА-ЯЁ][a-zа-яё]{1,20}+$/;
+    const re = /^[A-ZА-ЯЁ][a-zа-яё]{1,20}.+$/;
     return re.test(String(name));
 };
 
@@ -36,12 +36,28 @@ const isValidPassword = (password) => {
     return re.test(String(password));
 };
 
-    birth_day.max=new Date().toISOString().split("T")[0];
+birth_day.max=new Date().toISOString().split("T")[0];
+
+const isValidAge = (event)=>{
+    const now = new Date();
+    const today = new Date(now.getFullYear(), now.getMonth(), now.getDate()); 
+    const dob = new Date(event.target.value);
+    const dobnow = new Date(today.getFullYear(), dob.getMonth(), dob.getDate());
+    let age = today.getFullYear() - dob.getFullYear();
+    if (today < dobnow) {
+      age = age-1;
+    }
+    if(age<18){
+        setError(birth_day, 'Указанный Вами возраст менее 18 лет!');
+    } else {
+        setSuccess(isValidAge());
+    }
+    return age;
+}
 
 const validateInput = () =>{
     const first_nameValue = first_name.value.trim(),
         last_nameValue = last_name.value.trim(),
-        birth_dayValue = birth_day.value.trim(),
         emailValue = email.value.trim(),
         passwordValue = password.value.trim(),
         password_confirmValue = password_confirm.value.trim();
@@ -85,9 +101,6 @@ const validateInput = () =>{
         setError(password_confirm, "Пароли не совпадают!");
     } else {
         setSuccess(password_confirm);
-    }
-    if(birth_dayValue===0){
-
     }
 };
  
