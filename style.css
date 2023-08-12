@@ -15,7 +15,7 @@ body {
 #form{
     height: auto;
     width: auto;
-    margin: 40px;
+    /* margin: 40px; */
 
     background-color:rgba(255, 255, 255, 0.3);
 
@@ -42,12 +42,7 @@ body {
     outline: none;
     border-bottom: 4px solid rgba(167, 7, 207, 0.764);
 }
-#form input.invalid:focus{
-    border-bottom: 4px solid rgba(140, 0, 0, 0.764);
-}
-#form input.valid:focus{
-    border-bottom: 4px solid rgba(12, 120, 9, 0.867);
-}
+
 ::placeholder{
     color: rgba(0, 0, 0, 0.527);
     font-size: 14px;
@@ -81,8 +76,9 @@ body {
     box-shadow: 0 3px 10px rgba(53, 2, 54, 0.584);
     border-bottom: 1px solid rgba(49, 8, 35, 0.574);
 }
-#form button.invalid{
-    background: rgba(54, 47, 55, 0.692);
+#form button:disabled{
+    background: rgba(65, 65, 65, 0.692);
+    cursor: default;
 }
 #birth-day::-webkit-calendar-picker-indicator{
     cursor: pointer;
@@ -110,12 +106,44 @@ body {
     background: rgba(12, 120, 9, 0.867);
 }
 
-.error{
+.error_error{
     display: none;
-
     margin-left:20px;
-    width: 88%;
 
     color: rgb(140, 0, 0);
     text-shadow: 0px 0px 1px rgba(82, 7, 7, 0.578);
+}
+.errorDate{
+    display: none;
+
+    margin-left:20px;
+
+    color: rgb(140, 0, 0);
+    text-shadow: 0px 0px 1px rgba(82, 7, 7, 0.578);
+}
+.errorNothing{
+    display: none;
+    margin-left:20px;
+
+    color: #8c0000;
+    text-shadow: 0px 0px 1px #52070793;
+}
+
+.showPass{
+    display: block;
+}
+#password-checkbox{
+    margin-top: 5px;
+    margin-left: 20px;
+    text-decoration: none;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 17px;
+    cursor: pointer;
+    text-align: justify;
+    color: #000000;
+    text-decoration: underline dotted;
+}
+#password-checkbox:active{
+    color: #58044393;
+    text-decoration: underline dotted;
 }

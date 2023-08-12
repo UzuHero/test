@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Registration form</title>
     <link rel="stylesheet" href="./style.css">
-    <script src="./new_script.js" defer></script>
+    <script src="./final.js" defer></script>
 </head>
 <body>
         <form id="form">
@@ -15,8 +15,11 @@
                     <input id="first-name" type="text" placeholder="Иван" name="first_name" required>
                     <div class="validation_box first_name"></div>
                 </div>
-                <div class="error">
-                    errorddddddddddddddddd
+                <div class="error_error">
+                    Имя может содержать только буквы!
+                </div>
+                <div class="errorNothing">
+                    Это поле обязательно для заполнения!
                 </div>
             </div>
              <div class="input-control">
@@ -25,19 +28,26 @@
                     <input id="last-name" type="text" placeholder="Иванов" name="last_name" required>
                     <div class="validation_box last_name"></div>
                 </div>
-                <div class="error">
-                    fdfdfff
+                <div class="error_error">
+                    Фамилия может содержать только буквы!
+                </div>
+                <div class="errorNothing">
+                    Это поле обязательно для заполнения!
                 </div>
             </div>
              <div class="input-control">
                 <label for="birth_day">Дата рождения</label><br>
                 <div class="box"> 
-                    <input id="birth-day" type="date" name="birth_day" onkeydown="return false" onchange="isValidAge(event)" value="new Date()" required>
+                    <input id="birth-day" type="date" name="birth_day" onchange="isCheckValidAge(event)" min="1900-01-01" required>
                     <div class="validation_box birth_day"></div>  
                 </div> 
-                <div class="error">
-                    gfgfgfgfgf
-                </div> 
+                <div class="error_error">
+                    Ваш возраст меньше 18!<br> 
+                    Вы не можете зарегистрироваться.
+                </div>
+                <div class="errorDate">
+                    Неккоректная дата!
+                </div>
             </div>
             <div class="input-control">
                 <label for="email">Email</label><br>
@@ -45,8 +55,11 @@
                     <input id="email" type="email" placeholder="Example@mail.com" name="email" required>
                     <div class="validation_box email"></div>
                 </div>
-                <div class="error">
-                    fdsfdsfsfds
+                <div class="error_error">
+                    Вы ввели неккоректный электронный адрес!
+                </div>
+                <div class="errorNothing">
+                    Это поле обязательно для заполнения!
                 </div>
             </div>
             <div class="input-control">
@@ -55,8 +68,11 @@
                     <input id="password" type="password" placeholder="Придумайте пароль" name="password" required>
                     <div class="validation_box password"></div>
                 </div>
-                <div class="error">
-                    fdfsdfsf
+                <div class="error_error">
+                    Минимальная длина пароля 8 символов.<br> Пароль должен содержать минимум одну цифру, специальный символ, по одной заглавной и строчную буквы латиницы!
+                </div>
+                <div class="errorNothing">
+                    Это поле обязательно для заполнения!
                 </div>
             </div>
             <div class="input-control">
@@ -65,11 +81,17 @@
                     <input id="password-confirm" type="password" placeholder="Подтвердите пароль" name="password_confirm" required>
                     <div class="validation_box password_confirm"></div>
                 </div>
-                <div class="error">
-                    fsfdssfsd
+                <div class="error_error">
+                    Пароли не совпадают!
+                </div>
+                <div class="errorNothing">
+                    Это поле обязательно для заполнения!
                 </div>
             </div>
-                <button id="form-button" type="submit" disabled onclick="console.log(33333)">Зарегистрироваться</button>
+            <div class="showPass">
+                <a href="#" id="password-checkbox">Показать пароль</a>
+            </div>
+                <button id="form-button" type="submit" disabled>Зарегистрироваться</button>
         </form>
 </body>
 </html>
