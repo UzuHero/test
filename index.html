@@ -16,8 +16,7 @@
                     <input id="first-name" type="text" placeholder="Иван" name="first_name" required>
                     <div class="validation_box"></div>
                 </div>
-                <div class="warning">
-                    Имя должно содержать только буквы! 
+                <div class="error">
                 </div>
             </div>
             <div class="last_name">
@@ -26,8 +25,7 @@
                     <input id="last-name" type="text" placeholder="Иванов" name="last_name" required>
                     <div class="validation_box"></div>
                 </div>
-                <div class="warning">
-                    Фамилия должна содержать только буквы! 
+                <div class="error">
                 </div>
 
             </div>
@@ -37,8 +35,7 @@
                     <input id="birth-day" type="date" name="birth_day" onkeydown="return false" onchange="isValidAge(event)" required>
                     <div class="validation_box"></div>  
                 </div> 
-                <div class="warning">
-                    Указанный Вами возраст менее 18 лет!
+                <div class="error">
                 </div>
             </div>
             <div class="email">
@@ -47,8 +44,7 @@
                     <input id="email" type="email" placeholder="Example@mail.com" name="email" required>
                     <div class="validation_box"></div>
                 </div>
-                <div class="warning">
-                    Неверный адрес электронной почты! 
+                <div class="error">
                 </div>
             </div>
             <div class="password">
@@ -57,8 +53,7 @@
                     <input id="password" class="invalid" type="password" placeholder="Придумайте пароль" name="password" required>
                     <div class="validation_box pass"></div>
                 </div>
-                <div class="warning">
-                    Пароль должен состоять не менее чем из 8 знаков, содержать цифры, заглавные и прописные буквы латинского алфавита! 
+                <div class="error">
                 </div>
             </div>
             <div class="password_confirm">
@@ -67,8 +62,7 @@
                     <input id="password-confirm" class="valid" type="password" placeholder="Подтвердите пароль" name="password_confirm" required>
                     <div class="validation_box pass"></div>
                 </div>
-                <div class="warning">
-                    Пароли не совпадают! 
+                <div class="error">
                 </div>
             </div>
             <div class="form_button">

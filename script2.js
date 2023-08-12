@@ -21,6 +21,11 @@ function createId(users) {
     return Object.keys(users).length;
 };
 
+form.addEventListener('submit', e => {
+    e.preventDefault();
+
+    validateInputs();
+});
 
 const isValidEmail = (email) => {
     const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -55,7 +60,28 @@ const isValidAge = (event)=>{
     return age;
 }
 
-const validateInput = () =>{
+// const ValidName = (event)=>{
+//     const first_nameValue = first_name.value.trim(),
+//     last_nameValue = last_name.value.trim();
+
+//     if (first_nameValue === '') {
+//         setError(first_name, 'Это поле обязательно для заполнения!');
+//     } else if (!isValidName(first_nameValue)) {
+//         setError(first_name, 'Имя должно содержать только буквы!');
+//     } else {
+//         setSusses(first_name);
+//     }
+
+//     if (last_nameValue === '') {
+//         setError(last_name, 'Это поле обязательно для заполнения!');
+//     } else if (!isValidName(last_nameValue)) {
+//         setError(last_name, 'Имя должно начинаться с заглавной и содержать только буквы!');
+//     } else {
+//         setSusses(last_name);
+//     }
+// }
+
+const validateInputs= () =>{
     const first_nameValue = first_name.value.trim(),
         last_nameValue = last_name.value.trim(),
         emailValue = email.value.trim(),
@@ -104,10 +130,21 @@ const validateInput = () =>{
     }
 };
  
-const messageError = (element, message) => {
-    const inputControl = element.parentElement;
-    const errorMessage = inputControl.querySelector('.invalid');
 
-    errorMessage.innerText = message;
-    inputControl.classList.add('.invalid')
+const setError = (element, message) => {
+    const inputControl = element.parentElement;
+    const errorDisplay = inputControl.querySelector('.error');
+
+    errorDisplay.innerText = message;
+    inputControl.classList.add('error');
+    inputControl.classList.remove('success')
 }
+
+const setSuccess = element => {
+    const inputControl = element.parentElement;
+    const errorDisplay = inputControl.querySelector('.error');
+
+    errorDisplay.innerText = '';
+    inputControl.classList.add('success');
+    inputControl.classList.remove('error');
+};
