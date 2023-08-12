@@ -2,15 +2,14 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Registration Form</title>
+    <title>Registration form</title>
     <link rel="stylesheet" href="./style.css">
     <script src="./script2.js" defer></script>
 </head>
 <body>
-    <div class="container">
-        <form id="form" class="form">
-            <h1 class="form_title">Регистрация</h1>
-            <div class="first_name">
+        <form id="form">
+            <h1>Регистрация</h1>
+            <div class="input-control">
                 <label for="first_name">Имя</label><br>
                 <div class="box">
                     <input id="first-name" type="text" placeholder="Иван" name="first_name" required>
@@ -19,7 +18,7 @@
                 <div class="error">
                 </div>
             </div>
-            <div class="last_name">
+            <div class="input-control">
                 <label for="first_name">Фамилия</label><br>
                 <div class="box">
                     <input id="last-name" type="text" placeholder="Иванов" name="last_name" required>
@@ -27,9 +26,8 @@
                 </div>
                 <div class="error">
                 </div>
-
             </div>
-            <div class="birth_day">
+            <div class="input-control">
                 <label for="birth_day">Дата рождения</label><br>
                 <div class="box"> 
                     <input id="birth-day" type="date" name="birth_day" onkeydown="return false" onchange="isValidAge(event)" required>
@@ -38,7 +36,7 @@
                 <div class="error">
                 </div>
             </div>
-            <div class="email">
+            <div class="input-control">
                 <label for="email">Email</label><br>
                 <div class="box">
                     <input id="email" type="email" placeholder="Example@mail.com" name="email" required>
@@ -47,28 +45,25 @@
                 <div class="error">
                 </div>
             </div>
-            <div class="password">
+            <div class="input-control">
                 <label for="password">Пароль</label><br>
                 <div class="box">
-                    <input id="password" class="invalid" type="password" placeholder="Придумайте пароль" name="password" required>
+                    <input id="password" type="password" placeholder="Придумайте пароль" name="password" required>
                     <div class="validation_box pass"></div>
                 </div>
                 <div class="error">
                 </div>
             </div>
-            <div class="password_confirm">
+            <div class="input-control">
                 <label for="password_confirm">Подтвердите пароль</label><br>
                 <div class="box">
-                    <input id="password-confirm" class="valid" type="password" placeholder="Подтвердите пароль" name="password_confirm" required>
+                    <input id="password-confirm" type="password" placeholder="Подтвердите пароль" name="password_confirm" required>
                     <div class="validation_box pass"></div>
                 </div>
                 <div class="error">
                 </div>
             </div>
-            <div class="form_button">
-                <button id="form-button" type="submit" class="button invalid">Зарегистрироваться</button>
-            </div>
+                <button id="form-button" type="submit">Зарегистрироваться</button>
         </form>
-    </div>
 </body>
 </html>

@@ -5,96 +5,98 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-
-    font-family: 'PT Sans', sans-serif;
     margin: 0;
 
+    font-family: 'PT Sans', sans-serif;
+
     background-color: #8a2be2;
-    /* background: linear-gradient(90deg, rgba(100, 15, 185, 0.838) 0%, rgba(94, 176, 218, 0.811) 50%, rgba(96, 56, 226, 0.778) 100%); */
-    /* background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(138,43,226,1) 50%, rgba(0,212,255,1) 100%); */
 }
 
-.container{
-    margin-top: 40px;
-    margin-bottom: 40px;
-    width: 40%;
-}
+#form{
+    height: auto;
+    width: auto;
+    margin: 40px;
 
-.form{
-    height: 100%;
-    width: 100%;
     background-color:rgba(255, 255, 255, 0.3);
+
     box-shadow: 0 5px 45px rgba(0, 0, 0, 0.5);
     border-radius: 15px;
 }
-.form_title{
+#form h1{
     margin: 0;
     padding: 10px 0 10px 0;
+
     text-align: center;
 }
-input{
-    background: rgba(0, 0, 0, 0.2);
-    border: none;
-    margin: 0 0 0 20px;
+#form input{
+    margin: 0 20px 5px 20px;
     width: 88%;
     padding: 5px;
+
+    background: rgba(0, 0, 0, 0.2);
+    border: none;
     border-radius: 5px;
     border-bottom: 1px solid rgba(142, 18, 173, 0.671);
 }
-input:focus{
+#form input:focus{
     outline: none;
-    border-bottom: 3px solid rgba(167, 7, 207, 0.764);
+    border-bottom: 4px solid rgba(167, 7, 207, 0.764);
 }
-input.invalid:focus{
-    border-bottom: 3px solid rgba(140, 0, 0, 0.764);
+#form input.invalid:focus{
+    border-bottom: 4px solid rgba(140, 0, 0, 0.764);
 }
-input.valid:focus{
-    border-bottom: 3px solid rgba(12, 120, 9, 0.867);
+#form input.valid:focus{
+    border-bottom: 4px solid rgba(12, 120, 9, 0.867);
 }
 ::placeholder{
     color: rgba(0, 0, 0, 0.527);
     font-size: 14px;
 }
-label{
-    text-align: center;
+#form label{
     margin-left: 20px;
+
+    text-align: center;
     font-size: 20px;
 }
 
-.form_button{
+#form button{
     display: flex;
     justify-content:center;
-}
-.button{
+    cursor: pointer;
+
+    width: 300px;
+    margin: 20px 20px 30px 20px;
+    padding: 10px 0 10px 0;
+
     text-shadow: 3px 1px 3px rgba(0, 0, 0, 0.859);
     font-family: 'PT Sans', sans-serif;
-    border-radius: 20px;
-    border: none;
-    width: 250px;
-    margin: 10px 0 30px 0;
-    background: rgba(93, 0, 119, 0.692);
-    padding: 10px 0 10px 0;
-    text-align: center;
     color: rgba(228, 240, 240, 0.732);
     font-size: 20px;
+    text-align: center;
+
+    border-radius: 20px;
+    border: none;
+    
+    background: rgba(93, 0, 119, 0.692);
     box-shadow: 0 3px 10px rgba(53, 2, 54, 0.584);
     border-bottom: 1px solid rgba(49, 8, 35, 0.574);
-    cursor: pointer;
 }
-.button.invalid:focus{
+#form button.invalid{
     background: rgba(54, 47, 55, 0.692);
 }
 #birth-day::-webkit-calendar-picker-indicator{
     cursor: pointer;
 }
+
 .box{
     display:flex;
 
 }
+
 .validation_box{
     width: 10px;
     height: 10px;
-    margin: 5px;
+    margin: 5px 20px 5px 0px;
 
     border-radius: 50%;
     border: 1px solid rgb(108, 51, 162);
@@ -110,7 +112,8 @@ label{
 
 .error{
     margin-left:20px;
+    width: 88%;
+
     color: rgb(140, 0, 0);
     text-shadow: 0px 0px 1px rgba(82, 7, 7, 0.578);
-    width: 88%;
 }
