@@ -7,24 +7,17 @@ const form = document.querySelector('#form'),
     password_confirm = document.querySelector('#password-confirm'),
     form_button = document.querySelector('#form-button');
 
-const users = {};
-
-function User(first_name, last_name, birth_day, email, password){
-    this.first_name=first_name;
-    this.last_name=last_name;
-    this.birth_day=birth_day;
-    this.email=email;
-    this.password=password;
-};
-
-function createId(users) {
-    return Object.keys(users).length;
-};
 
 form.addEventListener('submit', e => {
     e.preventDefault();
 
     validateInputs();
+});
+
+birth_day.addEventListener('click', e => {
+    e.preventDefault();
+
+    isValidAge();
 });
 
 const isValidEmail = (email) => {
@@ -60,26 +53,23 @@ const isValidAge = (event)=>{
     return age;
 }
 
-// const ValidName = (event)=>{
-//     const first_nameValue = first_name.value.trim(),
-//     last_nameValue = last_name.value.trim();
+const setError = (element, message) => {
+    const inputControl = element.parentElement;
+    const errorDisplay = inputControl.querySelector('.error');
 
-//     if (first_nameValue === '') {
-//         setError(first_name, 'Это поле обязательно для заполнения!');
-//     } else if (!isValidName(first_nameValue)) {
-//         setError(first_name, 'Имя должно содержать только буквы!');
-//     } else {
-//         setSusses(first_name);
-//     }
+    errorDisplay.innerText = message;
+    inputControl.classList.add('error');
+    inputControl.classList.remove('success')
+}
 
-//     if (last_nameValue === '') {
-//         setError(last_name, 'Это поле обязательно для заполнения!');
-//     } else if (!isValidName(last_nameValue)) {
-//         setError(last_name, 'Имя должно начинаться с заглавной и содержать только буквы!');
-//     } else {
-//         setSusses(last_name);
-//     }
-// }
+const setSuccess = element => {
+    const inputControl = element.parentElement;
+    const errorDisplay = inputControl.querySelector('.error');
+
+    errorDisplay.innerText = '';
+    inputControl.classList.add('success');
+    inputControl.classList.remove('error');
+};
 
 const validateInputs= () =>{
     const first_nameValue = first_name.value.trim(),
@@ -131,20 +121,16 @@ const validateInputs= () =>{
 };
  
 
-const setError = (element, message) => {
-    const inputControl = element.parentElement;
-    const errorDisplay = inputControl.querySelector('.error');
+const users = {};
 
-    errorDisplay.innerText = message;
-    inputControl.classList.add('error');
-    inputControl.classList.remove('success')
-}
+function User(first_name, last_name, birth_day, email, password){
+    this.first_name=first_name;
+    this.last_name=last_name;
+    this.birth_day=birth_day;
+    this.email=email;
+    this.password=password;
+};
 
-const setSuccess = element => {
-    const inputControl = element.parentElement;
-    const errorDisplay = inputControl.querySelector('.error');
-
-    errorDisplay.innerText = '';
-    inputControl.classList.add('success');
-    inputControl.classList.remove('error');
+function createId(users) {
+    return Object.keys(users).length;
 };

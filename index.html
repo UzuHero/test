@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Registration form</title>
     <link rel="stylesheet" href="./style.css">
-    <script src="./script2.js" defer></script>
+    <script src="./new_script.js" defer></script>
 </head>
 <body>
         <form id="form">
@@ -13,34 +13,34 @@
                 <label for="first_name">Имя</label><br>
                 <div class="box">
                     <input id="first-name" type="text" placeholder="Иван" name="first_name" required>
-                    <div class="validation_box"></div>
+                    <div class="validation_box first_name"></div>
                 </div>
                 <div class="error">
                 </div>
             </div>
-            <div class="input-control">
+             <div class="input-control">
                 <label for="first_name">Фамилия</label><br>
                 <div class="box">
                     <input id="last-name" type="text" placeholder="Иванов" name="last_name" required>
-                    <div class="validation_box"></div>
+                    <div class="validation_box last_name"></div>
                 </div>
                 <div class="error">
                 </div>
             </div>
-            <div class="input-control">
+             <div class="input-control">
                 <label for="birth_day">Дата рождения</label><br>
                 <div class="box"> 
                     <input id="birth-day" type="date" name="birth_day" onkeydown="return false" onchange="isValidAge(event)" required>
-                    <div class="validation_box"></div>  
+                    <div class="validation_box birth_day"></div>  
                 </div> 
                 <div class="error">
-                </div>
+                </div> 
             </div>
             <div class="input-control">
                 <label for="email">Email</label><br>
                 <div class="box">
                     <input id="email" type="email" placeholder="Example@mail.com" name="email" required>
-                    <div class="validation_box"></div>
+                    <div class="validation_box email"></div>
                 </div>
                 <div class="error">
                 </div>
@@ -49,7 +49,7 @@
                 <label for="password">Пароль</label><br>
                 <div class="box">
                     <input id="password" type="password" placeholder="Придумайте пароль" name="password" required>
-                    <div class="validation_box pass"></div>
+                    <div class="validation_box password"></div>
                 </div>
                 <div class="error">
                 </div>
@@ -58,7 +58,7 @@
                 <label for="password_confirm">Подтвердите пароль</label><br>
                 <div class="box">
                     <input id="password-confirm" type="password" placeholder="Подтвердите пароль" name="password_confirm" required>
-                    <div class="validation_box pass"></div>
+                    <div class="validation_box password_confirm"></div>
                 </div>
                 <div class="error">
                 </div>
