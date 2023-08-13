@@ -15,12 +15,12 @@
                     <input id="first-name" type="text" placeholder="Иван" name="first_name" required>
                     <div class="validation_box first_name"></div>
                 </div>
-                <!-- <div class="error_error">
-                    Имя может содержать только буквы!
-                </div>
                 <div class="errorNothing">
                     Это поле обязательно для заполнения!
-                </div> -->
+                </div>
+                <div class="error">
+                    Недопустимое значение!
+                </div>
             </div>
              <div class="input-control">
                 <label for="first_name">Фамилия</label><br>
@@ -28,26 +28,26 @@
                     <input id="last-name" type="text" placeholder="Иванов" name="last_name" required>
                     <div class="validation_box last_name"></div>
                 </div>
-                <!-- <div class="error_error">
-                    Фамилия может содержать только буквы!
-                </div>
                 <div class="errorNothing">
                     Это поле обязательно для заполнения!
-                </div> -->
+                </div>
+                <div class="error">
+                    Недопустимое значение!
+                </div>
             </div>
              <div class="input-control">
                 <label for="birth_day">Дата рождения</label><br>
                 <div class="box"> 
-                    <input id="birth-day" type="date" name="birth_day" onchange="isCheckValidAge(event)" min="1900-01-01" required>
+                    <input id="birth-day" type="date" name="birth_day" onchange="isValidAge(event)" min="1900-01-01" required>
                     <div class="validation_box birth_day"></div>  
                 </div> 
-                <!-- <div class="error_error">
+                <div class="error">
                     Ваш возраст меньше 18!<br> 
                     Вы не можете зарегистрироваться.
                 </div>
-                <div class="errorDate">
+                <div class="errorNothing">
                     Неккоректная дата!
-                </div> -->
+                </div>
             </div>
             <div class="input-control">
                 <label for="email">Email</label><br>
@@ -55,12 +55,12 @@
                     <input id="email" type="email" placeholder="Example@mail.com" name="email" required>
                     <div class="validation_box email"></div>
                 </div>
-                <!-- <div class="error_error">
+                <div class="error">
                     Вы ввели неккоректный электронный адрес!
                 </div>
                 <div class="errorNothing">
                     Это поле обязательно для заполнения!
-                </div> -->
+                </div>
             </div>
             <div class="input-control">
                 <label for="password">Пароль</label><br>
@@ -68,12 +68,12 @@
                     <input id="password" type="password" placeholder="Придумайте пароль" name="password" required>
                     <div class="validation_box password"></div>
                 </div>
-                <!-- <div class="error_error">
-                    Минимальная длина пароля 8 символов.<br> Пароль должен содержать минимум одну цифру, специальный символ, по одной заглавной и строчную буквы латиницы!
+                <div class="error">
+                    Минимальная длина пароля 8 символов.<br> Пароль должен содержать минимум:<br>Одну цифру, специальный символ<br>Заглавную и строчную буквы!
                 </div>
                 <div class="errorNothing">
                     Это поле обязательно для заполнения!
-                </div> -->
+                </div>
             </div>
             <div class="input-control">
                 <label for="password_confirm">Подтвердите пароль</label><br>
@@ -81,12 +81,12 @@
                     <input id="password-confirm" type="password" placeholder="Подтвердите пароль" name="password_confirm" required>
                     <div class="validation_box password_confirm"></div>
                 </div>
-                <!-- <div class="error_error">
+                <div class="error">
                     Пароли не совпадают!
                 </div>
                 <div class="errorNothing">
                     Это поле обязательно для заполнения!
-                </div> -->
+                </div>
             </div>
             <div class="showPass">
                 <a href="#" id="password-checkbox">Показать пароль</a>
