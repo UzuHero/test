@@ -9,16 +9,16 @@ body {
 
     font-family: 'PT Sans', sans-serif;
 
-    background-color: #8a2be2;
+    background-color: #8a2ce2;
 }
 
 #form{
     height: auto;
     width: auto;
 
-    background-color:rgba(255, 255, 255, 0.3);
+    background-color:#ffffff4d;
 
-    box-shadow: 0 5px 45px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 5px 45px #00000080;
     border-radius: 15px;
 }
 #form h1{
@@ -32,18 +32,18 @@ body {
     width: 88%;
     padding: 5px;
 
-    background: rgba(0, 0, 0, 0.2);
+    background: #00000033;
     border: none;
     border-radius: 5px;
-    border-bottom: 1px solid rgba(142, 18, 173, 0.671);
+    border-bottom: 1px solid #8e12adab;
 }
 #form input:focus{
     outline: none;
-    border-bottom: 4px solid rgba(167, 7, 207, 0.764);
+    border-bottom: 4px solid #a707cfc3;
 }
 
 ::placeholder{
-    color: rgba(0, 0, 0, 0.527);
+    color: #00000086;
     font-size: 14px;
 }
 #form label{
@@ -62,21 +62,21 @@ body {
     margin: 20px 20px 30px 20px;
     padding: 10px 0 10px 0;
 
-    text-shadow: 3px 1px 3px rgba(0, 0, 0, 0.859);
+    text-shadow: 3px 1px 3px #000000db;
     font-family: 'PT Sans', sans-serif;
-    color: rgba(228, 240, 240, 0.732);
+    color: #e4f0f0bb;
     font-size: 20px;
     text-align: center;
 
     border-radius: 20px;
     border: none;
     
-    background: rgba(93, 0, 119, 0.692);
-    box-shadow: 0 3px 10px rgba(53, 2, 54, 0.584);
-    border-bottom: 1px solid rgba(49, 8, 35, 0.574);
+    background: #5d0077b0;
+    box-shadow: 0 3px 10px #35023695;
+    border-bottom: 1px solid #31082392;
 }
 #form button:disabled{
-    background: rgba(65, 65, 65, 0.692);
+    background: #414141b0;
     cursor: default;
 }
 #birth-day::-webkit-calendar-picker-indicator{
@@ -94,23 +94,23 @@ body {
     margin: 5px 20px 5px 0px;
 
     border-radius: 50%;
-    border: 1px solid rgb(108, 51, 162);
-    background: rgba(0, 0, 0, 0.256);
-    box-shadow: 1px 0px 1px rgba(53, 2, 54, 0.4);
+    border: 1px solid #6c33a2;
+    background: #00000041;
+    box-shadow: 1px 0px 1px #35023666;
 }
 .validation_box.invalid{
-    background: rgb(140, 0, 0);
+    background: #8c0000;
 }
 .validation_box.valid{
-    background: rgba(12, 120, 9, 0.867);
+    background: #0c7809dd;
 }
 
 .error{
     display: none;
     margin-left:20px;
 
-    color: rgb(140, 0, 0);
-    text-shadow: 0px 0px 1px rgba(82, 7, 7, 0.578);
+    color: #8c0000;
+    text-shadow: 0px 0px 1px #52070793;
 }
 .errorNothing{
     display: none;
@@ -126,10 +126,11 @@ body {
 #password-checkbox{
     margin-top: 5px;
     margin-left: 20px;
+    cursor: pointer;
+
     text-decoration: none;
     font-family: 'PT Sans', sans-serif;
     font-size: 17px;
-    cursor: pointer;
     color: #000000;
     text-decoration: underline dotted;
 }
