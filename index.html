@@ -10,9 +10,9 @@
         <form id="form">
             <h1>Регистрация</h1>
             <div class="input-control">
-                <label for="first_name">Имя</label><br>
+                <label for="first-name">Имя</label><br>
                 <div class="box">
-                    <input id="first-name" type="text" placeholder="Иван" name="first_name" required>
+                    <input id="first-name" type="text" placeholder="Иван" name="first_name" maxlength="20" required>
                     <div class="validation_box first_name"></div>
                 </div>
                 <div class="errorNothing">
@@ -23,9 +23,9 @@
                 </div>
             </div>
              <div class="input-control">
-                <label for="first_name">Фамилия</label><br>
+                <label for="last-name">Фамилия</label><br>
                 <div class="box">
-                    <input id="last-name" type="text" placeholder="Иванов" name="last_name" required>
+                    <input id="last-name" type="text" placeholder="Иванов" name="last_name" maxlength="20" required>
                     <div class="validation_box last_name"></div>
                 </div>
                 <div class="errorNothing">
@@ -36,7 +36,7 @@
                 </div>
             </div>
              <div class="input-control">
-                <label for="birth_day">Дата рождения</label><br>
+                <label for="birth-day">Дата рождения</label><br>
                 <div class="box"> 
                     <input id="birth-day" type="date" name="birth_day" onchange="isValidAge(event)" min="1900-01-01" required>
                     <div class="validation_box birth_day"></div>  
@@ -76,7 +76,7 @@
                 </div>
             </div>
             <div class="input-control">
-                <label for="password_confirm">Подтвердите пароль</label><br>
+                <label for="password-confirm">Подтвердите пароль</label><br>
                 <div class="box">
                     <input id="password-confirm" type="password" placeholder="Подтвердите пароль" name="password_confirm" required>
                     <div class="validation_box password_confirm"></div>
@@ -91,7 +91,7 @@
             <div class="showPass">
                 <a href="#" id="password-checkbox">Показать пароль</a>
             </div>
-                <button id="form-button" type="submit" disabled>Зарегистрироваться</button>
+                <button id="form-button" type="submit" disabled>Отправить</button>
         </form>
 </body>
 </html>

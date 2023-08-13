@@ -8,7 +8,7 @@ const form_button = document.getElementById('form-button'),
     showPassword = document.getElementById('password-checkbox');
 birth_day.max=new Date().toISOString().split("T")[0];
 document.getElementById('birth-day').valueAsDate = new Date();
-
+let users = {};
 
 form_button.addEventListener('click', e=>{
     e.preventDefault();
@@ -35,15 +35,17 @@ function User(first_name, last_name, birth_day, email, password){
 function createId(users) {
     return Object.keys(users).length;
 };
+
 const button_anDisable = () =>{
-    (document.querySelectorAll('.validation_box.invalid'))?
-    form_button.disabled=false
+    (document.querySelectorAll('.validation_box.valid').length===6)?
+    form_button.disabled = false
     :
-    form_button.disabled=true;
+    form_button.disabled = true;
 }
 
 const isValidName = (name) => {
-    const re = /^(?=^.{1,20}$)([A-ZА-ЯЁ][a-zа-яё]+[^0-9])$/gm;
+    // const re = /^(?=^.{1,20}$)([A-ZА-ЯЁ][a-zа-яё]+[^0-9])$/gm;
+    const re = /^([A-ZА-ЯЁ][a-zа-яё]+[^0-9]{0,20})$/gm;
     let result = re.test(name);
     return result;
 };
@@ -127,13 +129,13 @@ const isValidAge = () => {
     if (today < dobnow) {
       age = age-1;
     }
-    if (age<18){
+    if (age<18 || !birth_day.value){
         document.querySelector(`.validation_box.${birth_day.name}`).classList.remove('valid');
         document.querySelector(`.validation_box.${birth_day.name}`).classList.add('invalid');
         error(birth_day, true); errorNothing(birth_day, false);
         return false; 
     } 
-    else if(age>110){
+    else if(age>110 ||!birth_day.value){
         document.querySelector(`.validation_box.${birth_day.name}`).classList.remove('valid');
         document.querySelector(`.validation_box.${birth_day.name}`).classList.add('invalid');
         error(birth_day, false); errorNothing(birth_day, true);
@@ -167,7 +169,7 @@ const isValidPassword_confirm=(pass, pass_confirm)=>{
 }
 
 showPassword.onclick = (()=>{
-    if(password.type === 'password'&&password_confirm.type === 'password'){
+    if(password.type === 'password' && password_confirm.type === 'password'){
         password.type = 'text';
         password_confirm.type='text';
     } else{
@@ -206,4 +208,5 @@ const clear = () => {
                 item.classList.remove('valid');
                 item.classList.remove('invalid');
             });
+    form_button.disabled = true;
   }
