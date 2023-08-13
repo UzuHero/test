@@ -100,7 +100,8 @@ body {
     box-shadow: 1px 0px 1px rgba(53, 2, 54, 0.4);
 }
 .validation_box.invalid{
-    background: rgb(140, 0, 0);
+    /* background: rgb(140, 0, 0); */
+    background: #ffea00;
 }
 .validation_box.valid{
     background: rgba(12, 120, 9, 0.867);

@@ -25,7 +25,9 @@ form_button.addEventListener('click', e=>{
 
 const isValidName = (name) => {
     const re = /^[A-ZА-ЯЁ][a-zа-яё]{1,20}.+$/gm;
-    return re.test(name);
+    let proverka =  re.test(name);
+    console.log('isValidName', proverka, name);
+    return proverka;
 };
 const isValidEmail = (email) => {
     const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -39,11 +41,11 @@ const isValidPassword = (password) => {
 
 
 first_name.onblur = () => {
-    first_name.value = upperCase(first_name.value)
+    // first_name.value = upperCase(first_name.value)
     isValidate(first_name, isValidName);
 };
 last_name.onblur = () => {
-    last_name.value = upperCase(last_name.value);
+    // last_name.value = upperCase(last_name.value);
     isValidate(last_name, isValidName); 
 };
 email.onblur = () => {
@@ -62,6 +64,7 @@ function upperCase(string){
 }
 
 const isValidate = (name, nameFunc) => {
+    console.log('isValidate', nameFunc(name.value), name.value)
     if(nameFunc(name.value) === true){
         document.querySelector(`.validation_box.${name.name}`).classList.remove('invalid');
         document.querySelector(`.validation_box.${name.name}`).classList.add('valid');
